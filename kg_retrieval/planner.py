@@ -48,11 +48,21 @@ class GroqPlanner:
                         "role": "system",
                         "content": (
                             "Convert the user's e-commerce question into a JSON object "
-                            "with exactly these optional fields: filters and search. "
-                            "filters may contain only brand, vendor, category, name, "
-                            "each with a string value. search is a string. Use exact "
-                            "entity values mentioned by the user. Do not write SQL, "
-                            "Cypher, code, or answer the question. Return {} when no "
+                            "with exactly these fields: entity, filters, search. "
+                            "entity must be one of: product, order, customer, brand, "
+                            "vendor, category (default to product if unclear). filters "
+                            "is an object whose allowed keys depend on entity: "
+                            "product -> brand, vendor, category, name; "
+                            "order -> status, date, customer; "
+                            "customer -> name, city; "
+                            "brand -> name, country; "
+                            "vendor -> name, city; "
+                            "category -> name. "
+                            "status values are one of: processing, shipped, delivered, "
+                            "cancelled. search is a string for free-text matching. Use "
+                            "exact entity values mentioned by the user. Do not write "
+                            "SQL, Cypher, code, or answer the question. Return "
+                            '{"entity": "product", "filters": {}, "search": ""} when no '
                             "specific filter or search term can be identified."
                         ),
                     },

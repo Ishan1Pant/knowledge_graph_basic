@@ -1,0 +1,188 @@
+1.
+
+"question": "Which products from Apple are supplied by GlobalTech Distributors?"
+
+{
+  "planner": "Groq",
+  "plan": {
+    "entity": "product",
+    "filters": {
+      "brand": "Apple",
+      "vendor": "GlobalTech Distributors"
+    },
+    "search": ""
+  },
+  "answer": "Found 3 matching product(s):\n- iPhone 15 (ID P1): brand Apple; vendor GlobalTech Distributors; category Smartphones; $799.00; stock 40\n- AirPods Pro (ID P13): brand Apple; vendor GlobalTech Distributors; category Audio; $249.00; stock 70\n- MacBook Air M2 (ID P2): brand Apple; vendor GlobalTech Distributors; category Laptops; $1099.00; stock 25",
+  "records": [
+    {
+      "product_id": "P1",
+      "name": "iPhone 15",
+      "brand": "Apple",
+      "vendor": "GlobalTech Distributors",
+      "category": "Smartphones",
+      "price_usd": 799,
+      "stock": 40
+    },
+    {
+      "product_id": "P13",
+      "name": "AirPods Pro",
+      "brand": "Apple",
+      "vendor": "GlobalTech Distributors",
+      "category": "Audio",
+      "price_usd": 249,
+      "stock": 70
+    },
+    {
+      "product_id": "P2",
+      "name": "MacBook Air M2",
+      "brand": "Apple",
+      "vendor": "GlobalTech Distributors",
+      "category": "Laptops",
+      "price_usd": 1099,
+      "stock": 25
+    }
+  ]
+}
+
+2.
+
+"question": "How many products are there from Nike?"
+
+{
+  "planner": "Groq",
+  "plan": {
+    "entity": "product",
+    "filters": {
+      "brand": "Nike"
+    },
+    "search": ""
+  },
+  "answer": "Found 2 matching product(s):\n- Nike Pegasus 40 (ID P10): brand Nike; vendor SportZone Wholesale; category Footwear; $120.00; stock 90\n- Nike Air Max 90 (ID P9): brand Nike; vendor SportZone Wholesale; category Footwear; $130.00; stock 80",
+  "records": [
+    {
+      "product_id": "P10",
+      "name": "Nike Pegasus 40",
+      "brand": "Nike",
+      "vendor": "SportZone Wholesale",
+      "category": "Footwear",
+      "price_usd": 120,
+      "stock": 90
+    },
+    {
+      "product_id": "P9",
+      "name": "Nike Air Max 90",
+      "brand": "Nike",
+      "vendor": "SportZone Wholesale",
+      "category": "Footwear",
+      "price_usd": 130,
+      "stock": 80
+    }
+  ]
+}
+
+3.
+
+Find Banana.
+
+{
+  "planner": "Groq",
+  "plan": {
+    "entity": "product",
+    "filters": {},
+    "search": "Banana"
+  },
+  "answer": "Found 5 matching graph record(s): banana, banana, banana, banana, banana",
+  "records": [
+    {
+      "entity_type": "Keyword",
+      "id": "BN1",
+      "name": "banana"
+    },
+    {
+      "entity_type": "Keyword",
+      "id": "BN2",
+      "name": "banana"
+    },
+    {
+      "entity_type": "Keyword",
+      "id": "BN3",
+      "name": "banana"
+    },
+    {
+      "entity_type": "Keyword",
+      "id": "BN4",
+      "name": "banana"
+    },
+    {
+      "entity_type": "Keyword",
+      "id": "BN5",
+      "name": "banana"
+    }
+  ]
+}
+
+4. 
+
+ "question": "How many orders are processing"
+
+{
+  "planner": "Groq",
+  "plan": {
+    "entity": "order",
+    "filters": {
+      "status": "processing"
+    },
+    "search": ""
+  },
+  "answer": "Found 1 matching order(s):\n- Order O9 (ID O9): customer Eva Rossi; date 2026-09-01; status processing; $1148.00",
+  "records": [
+    {
+      "order_id": "O9",
+      "name": "Order O9",
+      "customer": "Eva Rossi",
+      "date": "2026-09-01",
+      "status": "processing",
+      "total_usd": 1148
+    }
+  ]
+}
+
+5. 
+
+"question": "how many total vendors do we have"
+
+{
+  "planner": "Groq",
+  "plan": {
+    "entity": "vendor",
+    "filters": {},
+    "search": ""
+  },
+  "answer": "Found 4 matching vendor(s):\n- GlobalTech Distributors (ID V1): city Singapore; rating 4.7\n- Seoul Electronics Hub (ID V2): city Seoul; rating 4.5\n- Prime Electronics (ID V3): city Delhi; rating 4.2\n- SportZone Wholesale (ID V4): city Mumbai; rating 4.6",
+  "records": [
+    {
+      "vendor_id": "V1",
+      "name": "GlobalTech Distributors",
+      "city": "Singapore",
+      "rating": 4.7
+    },
+    {
+      "vendor_id": "V2",
+      "name": "Seoul Electronics Hub",
+      "city": "Seoul",
+      "rating": 4.5
+    },
+    {
+      "vendor_id": "V3",
+      "name": "Prime Electronics",
+      "city": "Delhi",
+      "rating": 4.2
+    },
+    {
+      "vendor_id": "V4",
+      "name": "SportZone Wholesale",
+      "city": "Mumbai",
+      "rating": 4.6
+    }
+  ]
+}
